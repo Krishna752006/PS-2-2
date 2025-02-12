@@ -1,0 +1,30 @@
+We're building a smart AI coding assistant for VS Code, providing real-time code suggestions, autocompletions, and intelligent snippets. Simply type a prompt, and it generates context-aware code in seconds.
+
+This extension boosts developer productivity by offering AI-driven coding assistance and flawless VS Code integration for faster, smarter development.
+
+Through this project we shall be learn to Automate processes, create an AI-Powered Code Generation, learn to create plugins, Utilization of GPUs efficiently and real time AI Optimization.
+
+
+Hugging Face will be of help -> Need to research
+We shall be using Deepseek AI as the model --> Need to read the research paper
+
+PyTorch vs TensorFlow?
+For research & experimentation: PyTorch (Need to use this as Deepseek is build on it)
+For production & deployment: TensorFlow (better tools for scaling & serving)
+
+Link of DeepSeek Research Paper -> https://arxiv.org/pdf/2401.14196
+
+Backend to be completed till April 28,2025
+
+Current Approach Planned (Need to find a better Approach):
+By February 2025 end -> Front-End Website Should End
+By April 28,2025 -> Backend to be completed 
+
+Mahesh, Triveni, Sneha -> Front-End
+KC, Lokesh -> Back-End
+Aasrith -> Wild Card
+
+Front-End Lead -> Sneha
+Back-end Lead -> KC
+
+Sri Pooja Mam Advised not to make a website but it is not a huge task and a good approach so till we finalize a better approach we shall stick to it.
