@@ -1,0 +1,34 @@
+Found 2 other Models that are on par with DeepSeek: WizardCoder and Llama
+
+DeepSeek Paper Summary by ChatGPT:
+
+DeepSeek-Coder: Advancing Open-Source Code Intelligence
+
+Core Idea:
+DeepSeek-Coder introduces a series of open-source large language models (LLMs) designed for code intelligence, ranging from 1.3B to 33B parameters. The models aim to bridge the performance gap between open-source and closed-source code models, offering superior code generation, completion, and understanding.
+
+Key Takeaways:
+
+Extensive Training: Models trained from scratch on 2 trillion tokens covering 87 programming languages.
+
+Innovative Data Processing: Repository-level data curation, dependency parsing, and deduplication improve model context understanding.
+
+Enhanced Capabilities: Implements Fill-In-the-Middle (FIM) training and extends context length to 16K tokens.
+
+State-of-the-Art Performance: Outperforms existing open-source models like CodeLlama and even surpasses OpenAI’s GPT-3.5 Turbo on code-related benchmarks.
+
+Versatility: Supports multilingual code generation and program-based mathematical reasoning.
+
+Open-Source & Commercially Permissive: Available for both research and unrestricted commercial use.
+
+Impact:
+DeepSeek-Coder sets a new standard for open-source code models, enabling broader research, development, and real-world applications in software engineering.
+
+
+
+Approach Changed:
+
+Members with Low DL Experience -> ANN, RNN and LSTM
+Others -> Transformers and NLP
+
+an the cycle continues till we achieve ou goal of completing poject
