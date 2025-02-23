@@ -1,0 +1,79 @@
+AI has been transforming software development, but most models are closed-source, limiting research and innovation. DeepSeek aims to change this.
+
+DeepSeek LLMs have led to the development of the DeepSeek Coder Series— a collection of open-source code models ranging from 1.3B to 33B parameters. These models are trained from scratch on 2 trillion tokens sourced from 87 programming languages, ensuring a strong understanding of coding languages and syntax.
+
+These models can automate and streamline coding tasks such as bug detection and code generation, improving productivity and reducing human errors.
+
+The models utilize the Fill-In-Middle (FIM) approach, allowing them to fill in missing code sections. Researchers have also analyzed various FIM techniques to explore more sophisticated ways to pre-train models.
+
+DeepSeek-Coder-Base 7B has outperformed all other open-source models by a factor of five and even surpassed ChatGPT-3.5 Turbo, significantly narrowing the gap between open-source models and OpenAI's GPT-4.
+
+
+
+Training Data
+
+
+DeepSeek Coder’s training dataset consists of:
+
+85% pure code
+10% code-related natural language (English)
+The data is sourced primarily from GitHub and Stack Exchange.
+The dataset is created by:
+
+Scraping GitHub using data crawling.
+
+Applying filtering rules such as dependency parsing and repo-level deduplication.
+Performing quality screening to ensure only high-quality code is used.
+Low-quality code is filtered out using strict criteria, including:
+
+At least 25% alphabetic characters
+Maximum line length of 1,000 characters
+After filtering, only 32.8% of the original data remains.
+
+Deduplication & Dependency Parsing
+
+Most LLMs are pre-trained on file-level source code, often ignoring dependencies between files. However, DeepSeek Coder parses dependencies within repositories and orders files accordingly to maintain context.
+
+Deduplication removes duplicate code, which is a common practice in NLP and LLM training. Unlike standard file-level deduplication, DeepSeek applies repository-level deduplication, eliminating redundant and unnecessary files.
+
+Finally, a compiler is used to filter out additional low-quality data, such as:
+
+Syntax errors
+Poor readability
+Other inconsistencies
+
+After these steps, the final training dataset is 798 GB, consisting of 603 million files, distributed as follows:
+
+Java: 148 GB (18%)
+C++: 90 GB (11%)
+Python: 120 GB (15%)
+
+
+
+Model Architecture & Training
+
+The model is trained using the Fill-In-Middle (FIM) approach, where code is split into three parts and processed using either Prefix-Suffix-Middle (PSM) or Suffix-Prefix-Middle (SPM) techniques.
+
+Key training details:
+
+Tokenizer: Hugging Face Tokenizer (vocabulary size: 32,000)
+Architecture: Decoder-only Transformer with:
+Rotary Positional Embedding
+Grouped Query Attention
+Flash Attention v2
+Optimizer: AdamW (β₁ = 0.9, β₂ = 0.95)
+Hardware: NVIDIA A100 & H800 GPUs
+
+
+DeepSeek-Coder-Instruct
+
+DeepSeek-Coder-Instruct is an enhanced version of DeepSeek-Coder-Base, fine-tuned using instruction-based learning with high-quality data. This significantly improves response quality.
+
+Example:
+
+Base Model: Can generate code for "Write a snake game using Pygame."
+Instruct Model: Not only generates the game but also adds enhancements like "Include a scoring system in the top-left corner."
+
+
+DeepSeek Coder v1.5
+After completing the model, an additional 2 trillion tokens were used to further train it, leading to version 1.5 of the three models.
