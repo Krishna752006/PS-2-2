@@ -1,0 +1,45 @@
+DeepSeek-Coder-V2 is further pre-trained from an intermediate checkpoint of DeepSeek-V2
+with additional 6 trillion tokens. Through this continued pre-training, DeepSeek-Coder-V2 substantially enhances the coding and mathematical reasoning capabilities of DeepSeek-V2, while maintaining comparable performance in general language tasks.
+
+support for programming languages from 86 to 338
+
+context length from 16K to 128K
+
+there remains a discernible gap when comparing them to state-of-the-art closed-source models like GPT4-Turbo, Claude 3 Opus , and Gemini 1.5 Pro. To bridge this gap and further propel the development of open-source code models, we introduce the DeepSeek-Coder-V2 series.
+
+the dataset of DeepSeek-Coder-V2 is created with a composition of 60% source code, 10% math corpus, and 30% natural language corpus
+
+To demonstrate the effectiveness of the new code corpus, we conduct ablation studies with the 1B parameter model and observe improvements of 6.7% and 9.4% in accuracy across both HumanEval (from 30.5% to 37.2%) and MBPP (from 44.6% to 54.0%) benchmarks
+
+DeepSeek-Coder-V2 has been exposed to 10.2T training tokens 4.2 trillion tokens originate from the DeepSeek V2 dataset, while the remaining 6 trillion tokens come from the DeepSeek-Coder-V2 dataset
+
+in the reinforcement learning phase, we employ Group Relative Policy Optimization (GRPO) algorithm to align its behavior with human preferences
+
+To enable the model to support code completion after alignment, we also utilize Fill-In-Middle approach during the fine-tuning of the base model with 16B parameters.
+
+We introduce DeepSeek-Coder-V2 with 16B and 236B parameters based on the DeepSeek2
+MoE framework, which has activation parameters of only 2.4B and 21B
+
+same filtering rules and near-deduplication as those used in the DeepSeek-Coder
+
+To collect code-related and math-related web texts from Common Crawl, we follow the same pipeline as DeepSeekMath
+
+Since tokenization for languages like Chinese cannot be done through spaces, we use the Byte Pair Encoding (BPE) tokenizer from DeepSeek-V2, which significantly improves the recall accuracy of fastText.
+
+DeepSeek-Coder-v2 16B: Next-Token-Prediction and Fill-InMiddle (FIM)
+
+For DeepSeek-Coder-v2 236B, we only utilize the Next-Token-Prediction objective.
+
+Our architecture aligns with that of DeepSeekV2
+
+we encountered instability during training and spikes in gradient values, which
+we attributed to the exponential normalization technique. To address this, we reverted to the conventional normalization method.
+
+we utilize the AdamW optimizer
+
+we extend the context length of DeepSeek-Coder-V2 to 128K using Yarn
+
+Supervised Fine-Tuning
+Reinforcement Learning
+
+We employ Group Relative Policy Optimization (GRPO) Shao et al. (2024) as our RL algorithm

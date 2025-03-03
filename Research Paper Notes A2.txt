@@ -1,0 +1,23 @@
+DeepSeek Coder V2 is an upgrade over the normal DeepSeek Coder as it offers support for programming languages from 86 to 338 and also context length increase from 16K to 128K.
+
+This Model is taken from a pre-trained Deepseek V2 version and further trained with 6 Trillion Additional tokens to surpass the previous set capabilities of the previous version.
+
+The dataset of DeepSeek-Coder-V2 is created with a composition of 60% source code, 10% math corpus, and 30% natural language corpus.
+
+Total tokens on which ta=raining occurred = 4.2 trillion from pre-trained Deepseek V2 + 6 Trillion Additional i.e. 10.2 Trillion Tokens.
+
+In the reinforcement learning phase, they have employed Group Relative Policy Optimization (GRPO) algorithm to align its behavior with human preferences.
+
+They have introduce DeepSeek-Coder-V2 with 16B and 236B parameters based on the DeepSeek2 MoE framework, which has activation parameters of only 2.4B and 21B respectively.
+
+Same filtering rules and near-deduplication as those used in the DeepSeek-Coder.
+
+To collect code-related and math-related web texts from Common Crawl, we follow the same pipeline as DeepSeekMath.
+
+DeepSeek-Coder-v2 16B: Next-Token-Prediction and Fill-InMiddle (FIM).
+
+For DeepSeek-Coder-v2 236B, we only utilize the Next-Token-Prediction objective.
+
+The architecture aligns with that of DeepSeekV2.
+
+As for the Evaluation Metrics, the V1 model surpasses all open source models by 5 times but fails to come close to Open AI's ChatGPT - 4o but the V2 model almost surpasses each the GPT - 4o in almost all benchmarks thus making it even better companion for code creation.
