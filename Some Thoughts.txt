@@ -1,0 +1,26 @@
+Datasets
+Fine Tuning
+
+Github History working
+snapshots/safetensor
+flaws in code
+
+Customers based question
+
+locally downloaded model
+
+Team Roals
+
+solo vs your team what difference?
+alternative to techniques did ....
+why this only ...
+Roadblock questions
+Own datasets
+
+
+what is your project?
+till where completed?
+
+what roadblocks?
+
+suggestion: own dataset synthesize
