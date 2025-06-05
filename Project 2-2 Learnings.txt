@@ -1,0 +1,50 @@
+What is your Project about?
+Our project is about creating CodeGenie, a coding assistant available as a VS Code extension. It is designed to help developers all around the globe by generating intelligent, context-aware code snippets in seconds—just from a simple prompt! CodeGenie is powered by DeepSeek Coder to provide accurate and efficient code generation.
+
+What unique things have you done?
+
+Why is it special/different then the readily available products?
+Our Extension unlike other Extensions like Blackbox AI will be able to allows users to be able to run the model offline as well as online, giving complete freedom to those with powerful hardware to run it locally without any internet constraints. Running the model locally enables faster response times and better performance. Also this locally downloaded model can be taken by companies to modify it to their according need by the means of feature scaling and fine tuning.
+
+What each one you did to accomplish the project?
+
+Who will use it/ Use Cases of the project?
+All the coding Enthusiasts that indulge in coding will use our extension.
+
+How is your Product Unique?
+
+What are the features implemented?
+
+What are Future Developments?
+
+
+
+
+Explain All the packages that are required to run the model successfully?
+1) FastAPI
+FastAPI is a modern web framework for building APIs with Python. It's designed to be fast and easy to use. It is used for building APIs — especially web APIs — quickly and efficiently in Python. It's designed to be fast, developer-friendly, and reliable.
+
+2) Uvicorn
+Uvicorn is a lightweight, lightning-fast web server for running ASGI (Asynchronous Server Gateway Interface) apps — like FastAPI. It is the engine that actually runs the FastAPI app, handling incoming HTTP requests and sending back responses.
+
+FastAPI is the framework where you define your app (routes, logic, etc).
+Uvicorn is the server that runs the app and makes it accessible on the web.
+
+4) Torch
+Torch is a machine learning library designed to build and experiment with machine learning models efficiently.
+
+5) Accelerate
+Accelerate is a Python library that helps ensure ML models can run efficiently across different hardware platforms, including CPUs, GPUs, and TPUs. It abstracts away the complexity of managing the hardware and makes it easier to switch between devices with minimal code changes.
+
+6) Safetensors
+Safetensors is a library developed by Hugging Face to securely load and store large machine learning model weights.
+
+7) Huggingface_hub
+huggingface_hub is a Python library provided by Hugging Face that makes it easy to interact with the Hugging Face Hub. The Hugging Face Hub is a central platform where users can share, discover, and use machine learning models, datasets, and other resources.
+
+8) Pydantic
+Pydantic is a Python library used for data validation and settings management using Python type annotations. It is particularly useful for ensuring that the data passed to a program matches the expected structure and type, making your code safer and more reliable.
+
+Is FastAPI similar to Express but for python?
+Both are similar Web Frame works designed for different Tech Stacks all the while aiming for a high performance. The main difference is that FastAPI is very much designed for async programming and Express is designed for sync programming resulting for fastapi having much more better control in concurrency of the program tasks.
+
